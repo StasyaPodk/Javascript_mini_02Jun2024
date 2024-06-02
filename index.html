@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+
+    <style>
+        .user-container{
+            width: 50%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            border-color: black;
+            margin: 5px;
+            font-size: 15px;
+            font-color: blue;
+
+
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Два блоки в рядок */
+            gap: 20px; /* Відступ між блоками */
+        }
+
+        .user-block {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .user-block p {
+            margin: 0;
+        }
+
+        .user-block a {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+
+<div id="users-container" class="grid-container"></div>
+
+
+<script src = "Index.js"> </script>
+
+</body>
+</html>
