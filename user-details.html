@@ -5,25 +5,52 @@
     <title>User details</title>
 
     <style>
-.user-block{
-    width: 90%;
 
-background-color: navajowhite;
+
+ .user-block {
+     width: 90%;
+     margin: 0 auto;
+     text-align: center;
+     border: 1px solid #ccc;
+     padding: 20px;
+     margin-bottom: 20px;
+ }
+
+
+.button {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: violet;
+    color: black ;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.grid-container{
+
+.post-titles {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.button{
-    width: 90%;
-    height: 10vh;
-    background-color: lightgoldenrodyellow;
-    color: indigo;
+
+.post-titles p {
+    width: calc(20% - 20px);
+    margin: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
+
+
+
+
     </style>
 
 </head>
@@ -32,7 +59,7 @@ background-color: navajowhite;
 
 
 <div id="users-container" class="grid-container">
-    <button class ='button'>post of current user</button>
+
 </div>
 
 <script src = "user-details.js"> </script>
