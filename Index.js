@@ -12,16 +12,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 userIdName.textContent = `ID: ${user.id}, Name: ${user.name}`;
                 userDiv.appendChild(userIdName);
 
-
-                const detailsLink = document.createElement('a');
-                detailsLink.textContent = 'User Details';
-                detailsLink.href = `user-details.html?userId=${user.id}`;
-                userDiv.appendChild(detailsLink);
+                const detailsButton = document.createElement('button');
+                detailsButton.textContent = 'User Details';
+                detailsButton.classList.add('button');
+                detailsButton.onclick = function() {
+                    window.location.href = `user-details.html?userId=${user.id}`;
+                };
+                userDiv.appendChild(detailsButton);
 
                 usersContainer.appendChild(userDiv);
             });
-
-        })
-
+        });
 });
-

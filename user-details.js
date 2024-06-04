@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const button = document.createElement('button');
             button.classList.add('button');
-            button.innerText = 'Post of current user';
+            button.innerText = 'Post of Current User';
             button.style.margin = 'auto';
             button.onclick = function() {
                 fetch(`https://jsonplaceholder.typicode.com/users/${userId}/posts`) // Отримуємо всі пости користувача
@@ -37,6 +37,16 @@ document.addEventListener('DOMContentLoaded', () => {
                         posts.forEach(post => {
                             const postTitle = document.createElement('p');
                             postTitle.textContent = post.title;
+
+                            const postLink = document.createElement('button');
+                            postLink.classList.add('button');
+                            postLink.textContent = 'View Post Details';
+                            postLink.onclick = function() {
+                                window.location.href = `post-details.html?postId=${post.id}`; // Перехід на сторінку post-details.html з ID посту в URL
+                            };
+                            postLink.style.marginBottom = '5px';
+                            postTitle.appendChild(postLink);
+
                             postTitles.appendChild(postTitle);
                         });
                         userDiv.appendChild(postTitles);
